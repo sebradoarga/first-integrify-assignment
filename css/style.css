@@ -1,5 +1,402 @@
-*{
+/*  UTILITIES */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+p {
+    font-weight: 400;
+}
+
+header,
+button,
+.service h2 {
+    font-weight: 700;
+}
+
+.hero-text h1,
+.services h1 {
+    font-weight: 900;
+}
+
+.fas,
+.fab,
+button,
+header h1 {
+    cursor: pointer;
+}
+
+h1,
+h2,
+button {
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    position: absolute;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 18px;
+}
+
+.fa-ellipsis-h {
+}
+
+.menu {
+    display: none;
+}
+
+/* HERO */
+
+.hero {
+    height: 100vH;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../img/jeshoots-com-pUAM5hPaCRI-unsplash.jpg);
+    background-size: cover;
+    background-position: right;
+    color: white;
+}
+
+.hero-container {
+    padding: 150px 0;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text *{
+    text-align: center;
+}
+
+.hero-text h1{
+    font-size: 35px;
+}
+
+.hero-text p {
+    margin: 50px 20px;
+    line-height: 24px;
+    font-size: 18px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-buttons button {
+    font-size: 24px;
+    padding: 15px 35px;
+    margin: 15px;
+    background: transparent;
+    color: white;
+    border: 3px solid white;
+}
+
+.hero-buttons button:hover {
+    background: white;
+    color: black;
+    transition: 0.3s ease;
+}
+
+/* MEDIA QUERY FOR SMALLER PHONES */
+
+@media only screen and (max-height: 700px) {
+    .hero-container {
+        padding: 120px 0;
+    }    
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-text p {
+        font-size: 13px;
+        line-height: 19px;
+        margin: 35px 15px;
+    }
+
+    .hero-buttons button{
+        font-size: 19px;
+        padding: 10px 30px;
+        margin: 15px;
+    }
+}
+
+/* END OF MEDIA QUERY FOR SMALLER PHONES */
+
+/* SERVICES */
+
+.services {
+    margin: 100px auto;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services h1 {
+    font-size: 33px;
+    text-align: center;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+    border: 3px solid black;
+    padding: 35px 15px;
+}
+
+.service h2 {
+    text-align: center;
+}
+
+.service p {
+    text-align: center;
+    margin: 20px;
+    font-size: 13px;
+}
+
+.service button {
+    font-size: 16px;
+    background: transparent;
+    border: 3px solid black;
+    padding: 15px 35px;
+}
+
+.service button:hover {
+    background: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #262626;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.icons {
+    display: flex;
+    width: 110px;
+    justify-content: space-between;
+}
+
+.fab {
+    transform: scale(1.2);
+    display: inline-block
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-linkedin {
+    color: #2867B2;
+}
+
+.fa-instagram-square {
+    color: #C34A84;
+}
+
+footer p{
+    margin-top: 20px;
+    color: white;
+}
+
+/* MEDIA QUERY FOR TABLETS */
+@media only screen and (min-width: 768px){
+    /* HEADER */
+
+    .fa-ellipsis-h {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .links li {
+        margin: 0 20px;
+    }
+
+    .links li a {
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .links li:hover {
+        transform: scale(0.9);
+    }
+
+    /* HERO */
+
+    .hero-container {
+        justify-content: center;
+        height: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 50px;
+    }
+
+    .hero-text p {
+        font-size: 17px;
+        line-height: 25px;
+        margin: 55px 0 40px;
+        max-width: 750px;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+    }
+
+    .hero-buttons button {
+        width: 250px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .icons {
+        flex-direction: row-reverse;
+    }
+
+    footer p {
+        margin: 0;
+    }
+}
+
+/* MEDIA QUERY FOR DESKTOP */
+
+@media only screen and (min-width: 1200px){
+     /* SERVICES */
+
+     .services {
+        max-width: none;
+     }
+
+     .services-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 70px;
+    }
+
+    .service {
+        padding: 50px 15px;
+    }
+
+    .service button {
+        margin-top: 40px;
+    }
+}
+
+/* MEDIA QUERY FOR LARGE DESKTOPS */
+
+@media only screen and (min-width: 1500px){
+    /* HEADER */
+    header h1,
+    .links li a {
+        font-size: 30px;
+    }
+
+    /* HERO */
+
+    .hero-text h1 {
+        font-size: 80px;
+    }
+
+    .hero-text p {
+        font-size: 25px;
+        line-height: 35px;
+        max-width: 1000px;
+    }
+
+    .hero-buttons {
+        margin-top: 40px;
+    }
+
+    .hero-buttons button {
+        font-size: 30px;
+        width: 300px;
+    }
+
+    /* SERVICES */
+
+    .services h1 {
+        font-size: 65px;
+    }
+
+    .service {
+        padding: 60px 20px;
+    }
+
+    .service h2 {
+        font-size: 35px;
+    }
+
+    .service p {
+        font-size: 16px;
+        line-height: 25px;
+        margin: 35px 25px;
+    }
+
+    .service button {
+        font-size: 20px;
+    }
+
+    /* FOOTER */
+
+    .icons {
+        width: 150px;
+    }
+
+    .fab {
+        transform: scale(1.8);
+    }
+
+    footer p {
+        font-size: 20px;
+    }
 }
